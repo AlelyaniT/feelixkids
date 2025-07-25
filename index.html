@@ -403,44 +403,66 @@
         </div>
     </div>
 
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
+    
+<script>
+    // Initialize Lucide icons
+    lucide.createIcons();
 
-        // Modal functions
-        function openModal() {
-            document.getElementById('modal').classList.remove('hidden');
-        }
+    // Modal functions
+    function openModal() {
+        document.getElementById('modal').classList.remove('hidden');
+    }
 
-        function closeModal() {
-            document.getElementById('modal').classList.add('hidden');
-            document.getElementById('signupForm').classList.remove('hidden');
-            document.getElementById('successMessage').classList.add('hidden');
-            document.getElementById('signupForm').reset();
-        }
+    function closeModal() {
+        document.getElementById('modal').classList.add('hidden');
+        document.getElementById('signupForm').classList.remove('hidden');
+        document.getElementById('successMessage').classList.add('hidden');
+        document.getElementById('signupForm').reset();
+    }
 
-        // Form submission
-        document.getElementById('signupForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Simulate form submission
-            setTimeout(() => {
-                document.getElementById('signupForm').classList.add('hidden');
+    // Form submission
+    document.getElementById('signupForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const formData = {
+            parentName: this.parentName.value,
+            numberOfChildren: this.numberOfChildren.value,
+            phone: this.phone.value,
+            email: this.email.value
+        };
+
+        fetch("https://script.google.com/macros/s/AKfycbyGoR7WSi5zgJBI98877nOqg2rKk4ljxCNdw4CYQzLQMqDlZjfKDqtb7EoqBLk1fdLK3g/exec", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(res => res.text())
+        .then(response => {
+            if (response === "Success") {
+                this.classList.add('hidden');
                 document.getElementById('successMessage').classList.remove('hidden');
-                
-                // Auto close after 3 seconds
                 setTimeout(() => {
                     closeModal();
                 }, 3000);
-            }, 1000);
-        });
-
-        // Close modal when clicking outside
-        document.getElementById('modal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeModal();
+            } else {
+                alert("حدث خطأ أثناء الإرسال. يرجى المحاولة لاحقاً.");
             }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("فشل الاتصال بالخادم.");
         });
-    </script>
+    });
+
+    // Close modal when clicking outside
+    document.getElementById('modal').addEventListener('click', function (e) {
+        if (e.target === this) {
+            closeModal();
+        }
+    });
+</script>
+
 </body>
 </html>
