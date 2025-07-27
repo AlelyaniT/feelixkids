@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feelix Kids - منصة تعليمية تفاعلية للأطفال</title>
+    <meta name="description" content="منصة تعليمية تفاعلية للأطفال من عمر 3-13 سنة، تجمع بين المتعة والتعلم لتطوير مهارات القراءة والفهم باللغة العربية">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Arabic Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Cairo', 'Tajawal', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-indigo-600">Feelix Kids</div>
+                </div>
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <button onclick="openModal()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                        إنشاء حساب
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                رحلة القراءة الممتعة
+                <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                    بالذكاء الاصطناعي
+                </span>
+            </h1>
+            
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                منصة تعليمية تفاعلية للأطفال من عمر 3-13 سنة، تجمع بين المتعة والتعلم لتطوير مهارات القراءة والفهم باللغة العربية
+            </p>
+
+            <div class="flex justify-center">
+                <button onclick="openModal()" class="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-lg px-12 py-4 rounded-xl shadow-lg transition-all transform hover:scale-105">
+                    <i data-lucide="play" class="inline-block w-5 h-5 ml-2"></i>
+                    احجز تجربة تفاعلية مجانية
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Age Selection Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-4">
+                اختر المرحلة العمرية المناسبة لطفلك
+            </h2>
+            <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+                برنامج تعليمي متدرج يتطور مع نمو طفلك ويناسب قدراته في كل مرحلة
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Age 3-5 -->
+                <div class="bg-gradient-to-br from-pink-100 to-purple-100 p-8 rounded-2xl border border-pink-200 hover:shadow-lg transition-shadow">
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">🎨</div>
+                        <h3 class="text-2xl font-bold text-purple-800 mb-3">3-5 سنوات</h3>
+                        <h4 class="text-lg font-semibold text-purple-700 mb-4">مرحلة التأسيس</h4>
+                        <ul class="text-purple-600 space-y-2 text-right">
+                            <li>• تعلم الحروف والأصوات</li>
+                            <li>• الكلمات البسيطة</li>
+                            <li>• تحسين النطق</li>
+                            <li>• بناء المفردات الأساسية</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Age 6-9 -->
+                <div class="bg-gradient-to-br from-blue-100 to-indigo-100 p-8 rounded-2xl border border-blue-200 hover:shadow-lg transition-shadow">
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">📚</div>
+                        <h3 class="text-2xl font-bold text-indigo-800 mb-3">6-9 سنوات</h3>
+                        <h4 class="text-lg font-semibold text-indigo-700 mb-4">مرحلة التعلم الأساسي</h4>
+                        <ul class="text-indigo-600 space-y-2 text-right">
+                            <li>• فهم المقروء</li>
+                            <li>• قراءة النصوص</li>
+                            <li>• تكوين الجمل</li>
+                            <li>• تطوير الطلاقة</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Age 10-13 -->
+                <div class="bg-gradient-to-br from-green-100 to-teal-100 p-8 rounded-2xl border border-green-200 hover:shadow-lg transition-shadow">
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">✨</div>
+                        <h3 class="text-2xl font-bold text-teal-800 mb-3">10-13 سنة</h3>
+                        <h4 class="text-lg font-semibold text-teal-700 mb-4">مرحلة التطوير والإبداع</h4>
+                        <ul class="text-teal-600 space-y-2 text-right">
+                            <li>• تحليل النصوص</li>
+                            <li>• التفسير والاستنتاج</li>
+                            <li>• الكتابة الإبداعية</li>
+                            <li>• النقد البناء</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Selection Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-4">
+                اختر شخصيتك المفضلة
+            </h2>
+            <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+                شخصيات محبوبة ومألوفة لأطفالك مع إمكانية رفع صورة شخصية لطفلك
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- AI Generate Character -->
+                <div class="bg-gradient-to-br from-purple-100 to-pink-100 p-8 rounded-2xl border border-purple-200 text-center hover:shadow-lg transition-shadow">
+                    <div class="text-6xl mb-4">🤖</div>
+                    <h3 class="text-2xl font-bold text-purple-800 mb-3">إنشاء بالذكاء الاصطناعي</h3>
+                    <p class="text-purple-600">
+                        اطلب من الذكاء الاصطناعي إنشاء شخصية مخصصة لطفلك
+                    </p>
+                </div>
+
+                <!-- Upload Photo -->
+                <div class="bg-gradient-to-br from-blue-100 to-indigo-100 p-8 rounded-2xl border border-blue-200 text-center hover:shadow-lg transition-shadow">
+                    <div class="text-6xl mb-4">📸</div>
+                    <h3 class="text-2xl font-bold text-indigo-800 mb-3">ارفع صورة طفلك</h3>
+                    <p class="text-indigo-600">
+                        استخدم صورة طفلك الحقيقية ليكون بطل القصة
+                    </p>
+                </div>
+
+                <!-- Preset Characters -->
+                <div class="bg-gradient-to-br from-green-100 to-teal-100 p-8 rounded-2xl border border-green-200 text-center hover:shadow-lg transition-shadow">
+                    <div class="text-6xl mb-4">👦</div>
+                    <h3 class="text-2xl font-bold text-teal-800 mb-3">شخصيات جاهزة</h3>
+                    <p class="text-teal-600">
+                        اختر من مجموعة شخصيات محبوبة جاهزة
+                    </p>
+                </div>
+            </div>
+
+            <!-- Character Gallery -->
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl p-4 border-2 border-transparent hover:border-blue-400 transition-colors cursor-pointer">
+                    <div class="text-4xl mb-2 text-center">👦</div>
+                    <h4 class="font-bold text-center text-gray-800">تميم</h4>
+                </div>
+                <div class="bg-white rounded-xl p-4 border-2 border-transparent hover:border-pink-400 transition-colors cursor-pointer">
+                    <div class="text-4xl mb-2 text-center">👧</div>
+                    <h4 class="font-bold text-center text-gray-800">لولو</h4>
+                </div>
+                <div class="bg-white rounded-xl p-4 border-2 border-transparent hover:border-green-400 transition-colors cursor-pointer">
+                    <div class="text-4xl mb-2 text-center">👦</div>
+                    <h4 class="font-bold text-center text-gray-800">هشام</h4>
+                </div>
+                <div class="bg-white rounded-xl p-4 border-2 border-transparent hover:border-orange-400 transition-colors cursor-pointer">
+                    <div class="text-4xl mb-2 text-center">👧</div>
+                    <h4 class="font-bold text-center text-gray-800">نور</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Preview Section -->
+    <section class="py-16 bg-gradient-to-r from-indigo-50 to-purple-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">شاهد المغامرة التفاعلية</h2>
+            <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+                اكتشف عوالم مختلفة من القصص التفاعلية المصممة خصيصاً لإثارة خيال طفلك
+            </p>
+
+            <div class="grid md:grid-cols-4 gap-6 mb-12">
+                <!-- Forest Theme -->
+                <div class="bg-green-100 p-6 rounded-xl border-2 border-green-200 hover:border-green-400 transition-colors">
+                    <div class="text-4xl mb-3">🌲</div>
+                    <h3 class="font-bold text-green-800">مغامرة الغابة</h3>
+                    <p class="text-green-600 text-sm mt-2">استكشاف الطبيعة والحيوانات</p>
+                </div>
+
+                <!-- Friendship Theme -->
+                <div class="bg-pink-100 p-6 rounded-xl border-2 border-pink-200 hover:border-pink-400 transition-colors">
+                    <div class="text-4xl mb-3">👫</div>
+                    <h3 class="font-bold text-pink-800">قصص الصداقة</h3>
+                    <p class="text-pink-600 text-sm mt-2">تعلم قيم التعاون والمشاركة</p>
+                </div>
+
+                <!-- Adventure Theme -->
+                <div class="bg-orange-100 p-6 rounded-xl border-2 border-orange-200 hover:border-orange-400 transition-colors">
+                    <div class="text-4xl mb-3">🗺️</div>
+                    <h3 class="font-bold text-orange-800">مغامرات شيقة</h3>
+                    <p class="text-orange-600 text-sm mt-2">رحلات مثيرة ومليئة بالحماس</p>
+                </div>
+
+                <!-- Space Theme -->
+                <div class="bg-purple-100 p-6 rounded-xl border-2 border-purple-200 hover:border-purple-400 transition-colors">
+                    <div class="text-4xl mb-3">🚀</div>
+                    <h3 class="font-bold text-purple-800">عالم الفضاء</h3>
+                    <p class="text-purple-600 text-sm mt-2">استكشاف الكواكب والنجوم</p>
+                </div>
+            </div>
+
+            <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto border border-gray-200">
+                <div class="text-4xl mb-4">🎨</div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">رسم مخصص بالذكاء الاصطناعي</h3>
+                <p class="text-gray-600 mb-6">
+                    سيتم إنشاء رسم مخصص لقصتك باستخدام الذكاء الاصطناعي
+                </p>
+
+                <div class="bg-gradient-to-r from-orange-500 to-pink-500 text-white text-lg px-12 py-4 rounded-xl shadow-lg inline-flex items-center cursor-default opacity-90">
+                    <i data-lucide="eye" class="w-5 h-5 ml-2"></i>
+                    شاهد التجربة الكاملة مجاناً
+                </div>
+                
+                <p class="text-sm text-gray-500 mt-4">
+                    ⏱️ تجربة تفاعلية 3 دقائق • 🎯 مخصصة حسب عمر طفلك • 🔒 آمنة تماماً
+                </p>
+                
+                <div class="mt-4">
+                    <div class="text-gray-600 border border-gray-300 px-4 py-2 rounded-md text-sm inline-flex items-center cursor-default opacity-70">
+                        <i data-lucide="play" class="w-4 h-4 ml-2"></i>
+                        مشاهدة التجربة التفاعلية أولاً
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-4">مزايا فيليكس كيدز</h2>
+            <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+                تجربة تعليمية شاملة تجمع بين أحدث تقنيات الذكاء الاصطناعي والمحتوى التعليمي المتخصص
+            </p>
+
+            <!-- 4-Step Process -->
+            <div class="grid md:grid-cols-4 gap-8 mb-16">
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-blue-500 to-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">اختيار الشخصية</h3>
+                    <p class="text-gray-600">اختر شخصية مفضلة أو ارفع صورة طفلك</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-green-500 to-teal-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">اختيار الموضوع</h3>
+                    <p class="text-gray-600">حدد نوع المغامرة والموضوع المفضل</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-orange-500 to-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">إنشاء القصة</h3>
+                    <p class="text-gray-600">الذكاء الاصطناعي ينشئ قصة مخصصة</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-pink-500 to-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">الاستماع والقراءة</h3>
+                    <p class="text-gray-600">استمع للقصة واقرأها مع التحليل الصوتي</p>
+                </div>
+            </div>
+
+            <!-- Additional Features -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 bg-blue-50 rounded-xl">
+                    <div class="text-4xl mb-4">🎤</div>
+                    <h3 class="text-lg font-bold text-blue-800 mb-2">تسجيل صوتي</h3>
+                    <p class="text-blue-600 text-sm">تحليل النطق وتحسين مهارات القراءة</p>
+                </div>
+
+                <div class="text-center p-6 bg-green-50 rounded-xl">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="text-lg font-bold text-green-800 mb-2">لوحة الأهالي</h3>
+                    <p class="text-green-600 text-sm">متابعة التقدم والإحصائيات التفصيلية</p>
+                </div>
+
+                <div class="text-center p-6 bg-purple-50 rounded-xl">
+                    <div class="text-4xl mb-4">📚</div>
+                    <h3 class="text-lg font-bold text-purple-800 mb-2">مكتبة القصص</h3>
+                    <p class="text-purple-600 text-sm">احفظ واسترجع القصص المفضلة</p>
+                </div>
+
+                <div class="text-center p-6 bg-orange-50 rounded-xl">
+                    <div class="text-4xl mb-4">📈</div>
+                    <h3 class="text-lg font-bold text-orange-800 mb-2">تتبع التقدم</h3>
+                    <p class="text-orange-600 text-sm">تقارير مفصلة عن مستوى التحسن</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20 gradient-bg text-white text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold mb-4">
+                ابدأ رحلة التعلم الممتعة اليوم
+            </h2>
+            <p class="text-xl opacity-90 mb-8">
+                انضم لآلاف الأسر التي تثق بـ Feelix Kids لتطوير مهارات أطفالهم
+            </p>
+            <button onclick="openModal()" class="bg-white text-green-600 hover:bg-gray-100 text-lg px-12 py-4 rounded-xl border-2 border-white transition-colors">
+                <i data-lucide="play" class="inline-block w-5 h-5 ml-2"></i>
+                احجز تجربة تفاعلية مجانية
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="text-3xl font-bold text-indigo-400 mb-4">Feelix Kids</div>
+                <p class="text-gray-400 mb-8">منصة تعليمية تفاعلية لتطوير مهارات القراءة والفهم</p>
+                <div class="border-t border-gray-800 pt-8">
+                    <p class="text-gray-500 text-sm" dir="ltr">© 2025 Feelix AI - A registered business under MESHAER RUKMIYYA</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    </div>
+
+    
+
+<script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    function openModal() {
+        document.getElementById('modal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+        document.getElementById('modal').classList.add('hidden');
+        document.getElementById('signupForm').reset();
+    }
+
+    // Close modal on background click
+    document.getElementById('modal').addEventListener('click', function (e) {
+        if (e.target === this) {
+            closeModal();
+        }
+    });
+</script>
+
+</body>
+</html>
